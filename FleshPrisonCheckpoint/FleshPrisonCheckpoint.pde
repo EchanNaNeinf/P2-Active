@@ -11,12 +11,12 @@ void draw(){
   triangle(-100,300,100,300,0,100);//drawing top and bottom triangles
   triangle(-50,-100,50,-100,0,-400);
   for(int n = 0; n < 3;n++){//loop through 3 times for each layer
-    PrisonSide(0,-200,-200,0,0,50,0,n);
-    PrisonSide(0,200,200,0,0,50,100,n);
-    PrisonSide(200,0,0,-200,0,50,60,n);
-    PrisonSide(-200,0,0,200,0,50,20,n); 
+    PrisonSide(0,-200,-200,0,50,50,0,n);
+    PrisonSide(0,200,200,0,50,50,120,n);
+    PrisonSide(200,0,0,-200,50,50,100,n);
+    PrisonSide(-200,0,0,200,50,50,20,n); 
   }//then, draw the mouth and details
-  translate(0,40);
+  translate(20,40);
   rotate(0.5);
   noStroke();
   fill(100, 25, 25);
