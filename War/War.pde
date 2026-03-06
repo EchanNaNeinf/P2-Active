@@ -27,6 +27,10 @@ void draw(){
   rect(-400,50,800,100);
   fill(60+bg/4,60+bg/5,60+bg/5);
   rect(-400,150,800,150);
+  mine(0,110,sincos,1);
+  mine(100,90,sincos,3);
+  mine(-100,100,sincos,6);
+  mine(-250,100,sincos,10);
   twig(sincos,30,200);
   n = n-5;
   sincos++;
@@ -62,4 +66,13 @@ void twig(float timer,int x,int y){
   triangle(x-5+3*e,y-20,x+3*e+5,y-20,x-20+6*e,y-80-4*e);
   fill(50);
   quad(x+5,y+40,x-5,y+40,x-5-3*e,y+100,x-3*e+5,y+100);
+}
+void mine(int x, int y,float timer, int extra){
+  fill(30+bg/2,30+bg/3,30+bg/2);
+  rect(x-25,y,50,10);
+  ellipse(x,y+10,50,10);
+  fill(50+bg/2,50+bg/3,50+bg/3);
+  ellipse(x,y,50,20);
+  fill(sin(timer/10+extra)*100+170,0,0);
+  ellipse(x,y-5,15,10);
 }
